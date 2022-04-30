@@ -24,6 +24,7 @@ async function run() {
             const services = await cursor.toArray();
             res.send(services);
         });
+        // for find service by id 
         app.get('/service/:id', async (req, res) => {
             const id = req.params.id;
             const query = {_id:ObjectId(id)};
