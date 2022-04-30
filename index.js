@@ -36,9 +36,16 @@ async function run() {
             const newService = req.body;
             const result = await serviceCollection.insertOne(newService);
             res.send(result);
+        });
+
+        app.get('/hero' ,(req,res)=>{
+            res.send('Hero means khoje nika');
         })
 
     }
+
+    
+
     finally {
 
     }
